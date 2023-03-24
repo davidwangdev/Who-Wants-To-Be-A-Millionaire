@@ -97,7 +97,7 @@ function App() {
   return (
     <>
       <div className='app flex min-h-screen bg-darkblue text-white'>
-        {/* Left Container */}
+        {/* Left Container xdd*/}
         <div className='main w-3/4 bg-[url("./img/set.jpg")] bg-cover flex flex-col'>
           <div className='top h-1/2 relative'>
               <div className='timer absolute mt-6 w-16 h-16 rounded-full border-4 justify-center items-center p-2 
