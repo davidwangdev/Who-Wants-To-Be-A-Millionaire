@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import './App.css'
 import Trivia from './components/Trivia.jsx';
 import Timer from './components/Timer.jsx';
+import Start from './components/Start';
 
 
 
@@ -9,7 +10,7 @@ import Timer from './components/Timer.jsx';
 
 function App() {
 
-  const [qNum, setQNum] = useState(0);
+  const [questionNumber, setQuestionNumber] = useState(0);
   const [lost, setLost] = useState(false);
   const [earned, setEarned] = useState("$0");
 
@@ -102,68 +103,64 @@ function App() {
     ], []);
   
   useEffect(() => {
-    qNum >= 1 && setEarned(moneyValues.find(each => each.id === qNum).amount)
-  }, [moneyValues, qNum])
+    questionNumber >= 1 && setEarned(moneyValues.find(each => each.id === questionNumber).amount)
+  }, [moneyValues, questionNumber])
   
 
   return (
     <>
+    <div className='app'>
       <div className='flex min-h-screen bg-darkblue text-white'>
         {/* Left Container */}
-        <div className='main w-3/4 bg-[url("./img/set.jpg")] bg-cover flex flex-col'>
-          {lost ? 
-          <div className='h-72 m-auto mb-24 w-full bg-black border-6 text-center text-4xl'>
-          You earned {earned}! 
-          <br/>
-          Try again? 
-          <br/>
-          <div className='buttons mt-12'>
-            <button className='rounded-full border-8 border-white p-4 hover:bg-green-500'
-            onClick={() => window.location.reload()}>
-              Yes
-            </button>
-            <button className='rounded-full border-8 border-white p-4 hover:bg-red-500'
-            onClick={() => window.location.reload()}>
-              View Scoreboard
-            </button>
-          </div>
-          </div>
-          : 
-          (
-          <>
-          <div className='top h-1/2'></div>
-          <div className='bottom h-1/2'>
-            <Trivia 
-            data = {data} 
-            qNum = {qNum}
-            setQNum = {setQNum}
-            setLost = {setLost} 
-            />
-          </div>
-          </>
-          )}
+        <div className='main w-3/4 bg-[url("../set.jpg")] bg-cover flex flex-col'>
+          {lost ?
+              <div className='h-72 m-auto mb-24 w-full bg-[#8E66FB] border-6 text-center text-4xl'>
+              You earned {earned}!
+              <br />
+              <button className='rounded-full border-8 border-white p-4 hover:bg-green-500 mt-12'
+              onClick={() => window.location.reload()}>
+              Try again?
+              </button>
+              <br />
+            </div>
+            :
+            (
+              <>
+                <div className='top h-1/2'></div>
+                <div className='bottom h-1/2'>
+                  <Trivia
+                    data={data}
+                    questionNumber={questionNumber}
+                    setQuestionNumber={setQuestionNumber}
+                    setLost={setLost}
+                  />
+                </div>
+              </>
+            )}
 
         </div>
 
         {/* Right Container */}
         <div className='right w-1/4'>
           <ul className='p-5 mt-24'>
-            
-            {moneyValues.map((each) => 
-              (
-              <li className={`flex p-1 ${qNum + 1 === each.id ? 'bg-orange-500' : ''}`} key = {each.id}>
+
+            {moneyValues.map((each) =>
+            (
+              <li className={`flex p-1 ${questionNumber + 1 === each.id ? 'bg-orange-500' : ''}`}
+                key={each.id}>
                 <span className='text-xl w-1/3'>{each.id}</span>
                 <span className='text-2xl font-light'>{each.amount}</span>
               </li>
-              )
+            )
             )}
 
           </ul>
         </div>
       </div>
+    </div>
+
     </>
   )
-
 }
 
 export default App

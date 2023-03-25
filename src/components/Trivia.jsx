@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import Timer from './Timer';
 
-function Trivia({data, qNum, setQNum, setLost}) {
+function Trivia({data, questionNumber, setQuestionNumber, setLost}) {
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState("answer");
   
   useEffect(() => {
-    setQuestion(data[qNum]);
-  }, [data, qNum]);
+    setQuestion(data[questionNumber]);
+  }, [data, questionNumber]);
 
   function delay(duration, callback) {
     setTimeout(() => {
@@ -22,7 +22,7 @@ function Trivia({data, qNum, setQNum, setLost}) {
     delay(1000, () => setClassName(answer.correct ? 'answer correct' : 'answer wrong'));
     delay(4000, () => {
       if(answer.correct){
-        setQNum((prev) => prev + 1);
+        setQuestionNumber((prev) => prev + 1);
         setSelectedAnswer(null);
       } 
       else{
@@ -34,8 +34,10 @@ function Trivia({data, qNum, setQNum, setLost}) {
   return (
     <>
       <div className='trivia flex flex-col h-full items-center justify-around '>
-        <div className='question text-3xl bg-questionColor w-11/12 border-2 text-center p-5 hover:bg-darkblue mb-12'>
-        <Timer /> {question?.question}
+        <div className='question text-3xl bg-questionColor w-11/12 border-2 text-center p-5
+        hover:bg-darkblue mb-12'>
+        {question?.question}
+        <Timer setLost={setLost} questionNumber={questionNumber} selectedAnswer={selectedAnswer} />
         </div>
         <div className='answers flex flex-wrap w-full justify-center'>
           {question?.answers.map(answer => {
