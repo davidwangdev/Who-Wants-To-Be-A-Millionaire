@@ -29,9 +29,12 @@ export default function Timer({setLost, questionNumber, selectedAnswer}) {
   
   return (
     <>
-    <div className=''>
-      Time remaining: {timer}s
-    </div>
+
+      {questionNumber === 15 ? 'Congratulations! You Win $1000000!' : 
+      <div>
+        Time remaining: {timer}s
+      </div>}
+
     </>
   )
 }

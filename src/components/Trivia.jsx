@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Timer from './Timer';
 
-function Trivia({data, questionNumber, setQuestionNumber, setLost}) {
+function Trivia({data, questionNumber, setQuestionNumber, setLost, randomNumbers}) {
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState("answer");
