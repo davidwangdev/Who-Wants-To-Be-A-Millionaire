@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Trivia from './Trivia';
 
 
 
@@ -6,25 +7,33 @@ import {useState, useEffect} from 'react'
 
 
 
-
-export default function Timer() {
-  const [timer, setTimer] = useState(5);
+export default function Timer({setLost, questionNumber, selectedAnswer, questionID}) {
+  const [timer, setTimer] = useState(30);
 
   useEffect(() => {
-    let timerId = setInterval(() => {
+    if(selectedAnswer) setTimer(30);
+    if(timer === 0) return setLost(true);
+
+    let timerInterval = setInterval(() => {
       setTimer((prev) => prev - 1);
     }, 1000);
-    setTimeout(() => {
-      clearInterval(timerId)
-    }, 5000);
-  }, []);
+
+    return () => clearInterval(timerInterval);
+  }, [selectedAnswer, setLost, timer]);
+
+
+  useEffect(() => {
+    setTimer(30);
+  }, [questionNumber])
   
   
   return (
     <>
-    <div className='text-5xl'>
-      {timer}
-    </div>
+      {questionID === 3 ? 'Congratulations! You Win $1000000!' : 
+      <div>
+        Time remaining: {timer}s
+      </div>}
+
     </>
   )
 }
