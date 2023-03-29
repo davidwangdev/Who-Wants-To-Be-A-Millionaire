@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Timer from './Timer';
 
-function Trivia({data, questionNumber, setQuestionNumber, setLost, questionID, setQuestionID}) {
+function Trivia({data, questionNumber, setQuestionNumber, setWon, setLost, questionID, setQuestionID}) {
 
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -21,7 +21,6 @@ function Trivia({data, questionNumber, setQuestionNumber, setLost, questionID, s
   function handleClick(answer) {
     setSelectedAnswer(answer);
     setClassName('answer active');
-    delay(1000, () => setClassName(answer.correct ? 'answer correct' : 'answer wrong'));
     delay(1000, () => {
       if(answer.correct){
         setQuestionID(prev => prev + 1);
@@ -40,7 +39,7 @@ function Trivia({data, questionNumber, setQuestionNumber, setLost, questionID, s
         <div className='question text-3xl bg-questionColor w-11/12 border-2 text-center p-5
         hover:bg-darkblue mb-12'>
         {question?.question}
-        <Timer setLost={setLost} questionNumber={questionNumber} selectedAnswer={selectedAnswer} questionID={questionID}/>
+        <Timer setWon={setWon} setLost={setLost} questionNumber={questionNumber} selectedAnswer={selectedAnswer} questionID={questionID} />
         </div>
         <div className='answers flex flex-wrap w-full justify-center'>
           {question?.answers.map(answer => {

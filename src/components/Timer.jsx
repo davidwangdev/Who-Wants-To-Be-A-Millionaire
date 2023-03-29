@@ -7,7 +7,7 @@ import Trivia from './Trivia';
 
 
 
-export default function Timer({setLost, questionNumber, selectedAnswer, questionID}) {
+export default function Timer({setLost, setWon, questionNumber, selectedAnswer, questionID}) {
   const [timer, setTimer] = useState(30);
 
   useEffect(() => {
@@ -29,11 +29,10 @@ export default function Timer({setLost, questionNumber, selectedAnswer, question
   
   return (
     <>
-      {questionID === 3 ? 'Congratulations! You Win $1000000!' : 
+      {questionID === 16 ? setWon(true) : 
       <div>
         Time remaining: {timer}s
       </div>}
-
     </>
   )
 }

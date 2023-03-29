@@ -3,38 +3,6 @@
 @tailwind utilities;
 
 
-@keyframes correct {
-  22%, 42%, 62% {
-    background: goldenrod;
-  }
-  20%, 40%, 60% {
-    background: #002573;
-  }
-  90%, 100% {
-    background: green;
-  }
-}
-
-.answer.correct {
-  animation: correct 2s ease forwards;
-}
-
-@keyframes wrong {
-  22%, 42%, 62% {
-    background: goldenrod;
-  }
-  20%, 40%, 60% {
-    background: #002573;
-  }
-  90%, 100% {
-    background: red;
-  }
-}
-
-.answer.wrong {
-  animation: wrong 2s ease forwards;
-}
-
 .answer {
   width: 40%;
   padding: 1.5rem;
@@ -56,5 +24,5 @@
 }
 
 .answer.active {
-  background-color: pink;
+  background-color: orange;
 }

@@ -6,10 +6,9 @@ import Start from './components/Start';
 
 
 
-
-
 function App() {
-  const data = [
+  const data = useMemo(() => 
+  [
     {
       id: 1,
       question: "What is the capital of Japan?",
@@ -320,7 +319,7 @@ function App() {
     },
     {
       id: 15,
-      question: "What is the smallest country in the world?",
+      question: "What is the smallest country in the world by land area?",
       answers: [
       {
       text: "Vatican City",
@@ -342,24 +341,24 @@ function App() {
     },
     {
       id: 16,
-      question: "Which planet in our solar system has the most moons?",
+      question: "What is the name of the famous female singer who is known as the Queen of Pop?",
       answers: [
-      {
-      text: "Jupiter",
-      correct: true,
-      },
-      {
-      text: "Saturn",
-      correct: false,
-      },
-      {
-      text: "Neptune",
-      correct: false,
-      },
-      {
-      text: "Uranus",
-      correct: false,
-      },
+        {
+          text: "Cher",
+          correct: false,
+        },
+        {
+          text: "Madonna",
+          correct: true,
+        },
+        {
+          text: "Whitney Houston",
+          correct: false,
+        },
+        {
+          text: "Tina Turner",
+          correct: false,
+        },
       ],
     },
     {
@@ -408,24 +407,24 @@ function App() {
     },    
     {
       id: 19,
-      question: "Which country won the first FIFA World Cup in 1930?",
+      question: "Which country has the largest population in the world?",
       answers: [
         {
-          text: "Uruguay",
+          text: "India",
+          correct: false,
+        },
+        {
+          text: "China",
           correct: true,
         },
         {
-          text: "Brazil",
+          text: "United States",
           correct: false,
         },
         {
-          text: "Argentina",
+          text: "Indonesia",
           correct: false,
         },
-        {
-          text: "Germany",
-          correct: false,
-        }
       ],
     },
     {
@@ -459,7 +458,7 @@ function App() {
           correct: false,
         },
         {
-          text: "Kilimanjaro",
+          text: "Mount Kilimanjaro",
           correct: true,
         },
         {
@@ -628,66 +627,66 @@ function App() {
     },
     {
       id: 29,
-      question: "What is the currency of Switzerland?",
+      question: "Which US state is known as the 'Sunshine State'?",
       answers: [
         {
-          text: "Euro",
+          text: "California",
           correct: false,
         },
         {
-          text: "Franc",
+          text: "Florida",
           correct: true,
         },
         {
-          text: "Pound",
+          text: "Texas",
           correct: false,
         },
         {
-          text: "Dollar",
+          text: "Arizona",
           correct: false,
         },
       ],
     },
     {
       id: 30,
-      question: "What is the capital of South Africa?",
+      question: "Which famous novel by Mark Twain features the characters Tom Sawyer and Huckleberry Finn?",
       answers: [
         {
-          text: "Cape Town",
+          text: "Adventures of Sherlock Holmes",
           correct: false,
         },
         {
-          text: "Pretoria",
+          text: "To Kill a Mockingbird",
+          correct: false,
+        },
+        {
+          text: "The Catcher in the Rye",
+          correct: false,
+        },
+        {
+          text: "Adventures of Huckleberry Finn",
           correct: true,
-        },
-        {
-          text: "Johannesburg",
-          correct: false,
-        },
-        {
-          text: "Durban",
-          correct: false,
         },
       ],
-    },  
+    },
     {
       id: 31,
-      question: "Who wrote the novel 'Ulysses'?",
+      question: "What is the meaning of the French phrase 'cul-de-sac'?",
       answers: [
         {
-          text: "James Joyce",
+          text: "Dead end",
           correct: true,
         },
         {
-          text: "Virginia Woolf",
+          text: "Traffic circle",
           correct: false,
         },
         {
-          text: "William Faulkner",
+          text: "Roundabout",
           correct: false,
         },
         {
-          text: "F. Scott Fitzgerald",
+          text: "Highway",
           correct: false,
         },
       ],
@@ -811,7 +810,7 @@ function App() {
           correct: false,
         },
         {
-          text: "Denali",
+          text: "Mount Denali",
           correct: true,
         },
         {
@@ -826,7 +825,7 @@ function App() {
     },
     {
       id: 38,
-      question: "What is the name of the largest island in the Mediterranean Sea?",
+      question: "What is the name of the largest island in the Mediterranean Sea by land area?",
       answers: [
         {
           text: "Corsica",
@@ -1066,7 +1065,2037 @@ function App() {
         },
       ],
     },
-  ];
+    {
+      id: 49,
+      question: "What is the smallest unit of measurement in the metric system?",
+      answers: [
+        {
+          text: "Nanometer",
+          correct: false,
+        },
+        {
+          text: "Picometer",
+          correct: false,
+        },
+        {
+          text: "Micrometer",
+          correct: false,
+        },
+        {
+          text: "Femtometer",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 50,
+      question: "Who is the current president of France?",
+      answers: [
+        {
+          text: "Emmanuel Macron",
+          correct: true,
+        },
+        {
+          text: "François Hollande",
+          correct: false,
+        },
+        {
+          text: "Nicolas Sarkozy",
+          correct: false,
+        },
+        {
+          text: "Jacques Chirac",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 51,
+      question: "What is the scientific name for the human tailbone?",
+      answers: [
+        {
+          text: "Coccyx",
+          correct: true,
+        },
+        {
+          text: "Sacrum",
+          correct: false,
+        },
+        {
+          text: "Femur",
+          correct: false,
+        },
+        {
+          text: "Radius",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 52,
+      question: "Which country is both the largest producer of coffee in the world?",
+      answers: [
+        {
+          text: "Brazil",
+          correct: true,
+        },
+        {
+          text: "Colombia",
+          correct: false,
+        },
+        {
+          text: "Ethiopia",
+          correct: false,
+        },
+        {
+          text: "Vietnam",
+          correct: false,
+        },
+      ],
+    }, 
+    {
+      id: 53,
+      question: "Which animal is capable of regenerating its limbs?",
+      answers: [
+        {
+          text: "Axolotl",
+          correct: true,
+        },
+        {
+          text: "Salamander",
+          correct: false,
+        },
+        {
+          text: "Gecko",
+          correct: false,
+        },
+        {
+          text: "Chameleon",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 54,
+      question: "What is the name of the British mathematician who is considered the father of computer science?",
+      answers: [
+        {
+          text: "Alan Turing",
+          correct: true,
+        },
+        {
+          text: "Isaac Newton",
+          correct: false,
+        },
+        {
+          text: "Charles Babbage",
+          correct: false,
+        },
+        {
+          text: "Blaise Pascal",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 55,
+      question: "What is the name of the philosopher who wrote 'The Republic'?",
+      answers: [
+        {
+          text: "Plato",
+          correct: true,
+        },
+        {
+          text: "Aristotle",
+          correct: false,
+        },
+        {
+          text: "Socrates",
+          correct: false,
+        },
+        {
+          text: "Confucius",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 56,
+      question: "What is the name of the phenomenon where an electron behaves like both a particle and a wave?",
+      answers: [
+        {
+          text: "Wave-particle duality",
+          correct: true,
+        },
+        {
+          text: "Quantum entanglement",
+          correct: false,
+        },
+        {
+          text: "Quantum tunneling",
+          correct: false,
+        },
+        {
+          text: "Blackbody radiation",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 57,
+      question: "Who is the author of 'Crime and Punishment'?",
+      answers: [
+        {
+          text: "Leo Tolstoy",
+          correct: false,
+        },
+        {
+          text: "Fyodor Dostoevsky",
+          correct: true,
+        },
+        {
+          text: "Anton Chekhov",
+          correct: false,
+        },
+        {
+          text: "Vladimir Nabokov",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 58,
+      question: "What is the name of the nearest spiral galaxy to our own Milky Way?",
+      answers: [
+        {
+          text: "Andromeda",
+          correct: true,
+        },
+        {
+          text: "Orion",
+          correct: false,
+        },
+        {
+          text: "Cepheus",
+          correct: false,
+        },
+        {
+          text: "Virgo",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 59,
+      question: "What is the name of the process where a solid changes directly into a gas without becoming a liquid first?",
+      answers: [
+        {
+          text: "Melting",
+          correct: false,
+        },
+        {
+          text: "Freezing",
+          correct: false,
+        },
+        {
+          text: "Condensation",
+          correct: false,
+        },
+        {
+          text: "Sublimation",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 60,
+      question: "What is the name of the fundamental force that holds atoms together?",
+      answers: [
+        {
+          text: "Gravity",
+          correct: false,
+        },
+        {
+          text: "Electromagnetism",
+          correct: false,
+        },
+        {
+          text: "Strong nuclear force",
+          correct: true,
+        },
+        {
+          text: "Weak nuclear force",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 61,
+      question: "What is the name of the phenomenon where light bends as it passes through a medium?",
+      answers: [
+        {
+          text: "Diffraction",
+          correct: false,
+        },
+        {
+          text: "Refraction",
+          correct: true,
+        },
+        {
+          text: "Reflection",
+          correct: false,
+        },
+        {
+          text: "Dispersion",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 62,
+      question: "What is the primary unit of measure for frequency?",
+      answers: [
+        {
+          text: "Meters",
+          correct: false,
+        },
+        {
+          text: "Hertz",
+          correct: true,
+        },
+        {
+          text: "Seconds",
+          correct: false,
+        },
+        {
+          text: "Watts",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 63,
+      question: "Which noble gas has the lowest atomic number?",
+      answers: [
+        {
+          text: "Helium",
+          correct: true,
+        },
+        {
+          text: "Neon",
+          correct: false,
+        },
+        {
+          text: "Argon",
+          correct: false,
+        },
+        {
+          text: "Xenon",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 64,
+      question: "What is the process by which plants convert light energy into chemical energy?",
+      answers: [
+        {
+          text: "Photosynthesis",
+          correct: true,
+        },
+        {
+          text: "Respiration",
+          correct: false,
+        },
+        {
+          text: "Fermentation",
+          correct: false,
+        },
+        {
+          text: "Digestion",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 65,
+      question: "What is the smallest unit of life?",
+      answers: [
+        {
+          text: "Atom",
+          correct: false,
+        },
+        {
+          text: "Molecule",
+          correct: false,
+        },
+        {
+          text: "Cell",
+          correct: true,
+        },
+        {
+          text: "Organ",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 66,
+      question: "Which country is home to the Great Barrier Reef?",
+      answers: [
+        {
+          text: "Indonesia",
+          correct: false,
+        },
+        {
+          text: "Australia",
+          correct: true,
+        },
+        {
+          text: "Thailand",
+          correct: false,
+        },
+        {
+          text: "Philippines",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 67,
+      question: "Who is the founder of Microsoft?",
+      answers: [
+        {
+          text: "Bill Gates",
+          correct: true,
+        },
+        {
+          text: "Steve Jobs",
+          correct: false,
+        },
+        {
+          text: "Mark Zuckerberg",
+          correct: false,
+        },
+        {
+          text: "Jeff Bezos",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 68,
+      question: "Which country is home to the ancient city of Petra?",
+      answers: [
+        {
+          text: "Greece",
+          correct: false,
+        },
+        {
+          text: "Jordan",
+          correct: true,
+        },
+        {
+          text: "Egypt",
+          correct: false,
+        },
+        {
+          text: "Israel",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 69,
+      question: "What is the Schrodinger equation?",
+      answers: [
+        {
+          text: "A mathematical equation that describes the behavior of subatomic particles",
+          correct: true,
+        },
+        {
+          text: "An equation that describes the motion of planets",
+          correct: false,
+        },
+        {
+          text: "An equation that describes the behavior of waves",
+          correct: false,
+        },
+        {
+          text: "An equation that describes the behavior of gases",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 70,
+      question: "Which city is known as the 'City of Love'?",
+      answers: [
+        {
+          text: "New York City",
+          correct: false,
+        },
+        {
+          text: "Paris",
+          correct: true,
+        },
+        {
+          text: "Venice",
+          correct: false,
+        },
+        {
+          text: "Rome",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 71,
+      question: "What is the name of the nearest star to our Solar System?",
+      answers: [
+        {
+          text: "Alpha Centauri",
+          correct: false,
+        },
+        {
+          text: "Betelgeuse",
+          correct: false,
+        },
+        {
+          text: "Proxima Centauri",
+          correct: true,
+        },
+        {
+          text: "Sirius",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 72,
+      question: "What is the meaning of the acronym 'HTTP'?",
+      answers: [
+        {
+          text: "Hypertext Transfer Protocol",
+          correct: true,
+        },
+        {
+          text: "Hypertext Transmission Protocol",
+          correct: false,
+        },
+        {
+          text: "Hyperlink Transmission Protocol",
+          correct: false,
+        },
+        {
+          text: "Hyperlink Transfer Protocol",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 73,
+      question: "Which country is known for inventing the game of cricket?",
+      answers: [
+        {
+          text: "India",
+          correct: false,
+        },
+        {
+          text: "England",
+          correct: true,
+        },
+        {
+          text: "Australia",
+          correct: false,
+        },
+        {
+          text: "South Africa",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 74,
+      question: "What is the capital city of Peru?",
+      answers: [
+        {
+          text: "Santiago",
+          correct: false,
+        },
+        {
+          text: "Bogotá",
+          correct: false,
+        },
+        {
+          text: "Lima",
+          correct: true,
+        },
+        {
+          text: "Quito",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 75,
+      question: "Which famous movie director directed the 1979 movie 'Apocalypse Now'?",
+      answers: [
+        {
+          text: "Francis Ford Coppola",
+          correct: true,
+        },
+        {
+          text: "Steven Spielberg",
+          correct: false,
+        },
+        {
+          text: "Alfred Hitchcock",
+          correct: false,
+        },
+        {
+          text: "Martin Scorsese",
+          correct: false,
+        },
+      ],
+    },
+
+    {
+      id: 76,
+      question: "Which famous actor played the character of Forrest Gump in the movie of the same name?",
+      answers: [
+        {
+          text: "Tom Hanks",
+          correct: true,
+        },
+        {
+          text: "Johnny Depp",
+          correct: false,
+        },
+        {
+          text: "Leonardo DiCaprio",
+          correct: false,
+        },
+        {
+          text: "Brad Pitt",
+          correct: false,
+        },
+      ],
+    },
+
+    {
+      id: 77,
+      question: "What is the name of the character played by Keanu Reeves in 'The Matrix'?",
+      answers: [
+        {
+          text: "Neo",
+          correct: true,
+        },
+        {
+          text: "Trinity",
+          correct: false,
+        },
+        {
+          text: "Morpheus",
+          correct: false,
+        },
+        {
+          text: "Agent Smith",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 78,
+      question: "What is the currency of Switzerland?",
+      answers: [
+        {
+          text: "Euro",
+          correct: false,
+        },
+        {
+          text: "Franc",
+          correct: true,
+        },
+        {
+          text: "Pound",
+          correct: false,
+        },
+        {
+          text: "Dollar",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 79,
+      question: "What is the capital of South Africa?",
+      answers: [
+        {
+          text: "Cape Town",
+          correct: false,
+        },
+        {
+          text: "Pretoria",
+          correct: true,
+        },
+        {
+          text: "Johannesburg",
+          correct: false,
+        },
+        {
+          text: "Durban",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 80,
+      question: "Who wrote the novel 'Ulysses'?",
+      answers: [
+        {
+          text: "James Joyce",
+          correct: true,
+        },
+        {
+          text: "Virginia Woolf",
+          correct: false,
+        },
+        {
+          text: "William Faulkner",
+          correct: false,
+        },
+        {
+          text: "F. Scott Fitzgerald",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 81,
+      question: "Who directed the film 'Jaws'?",
+      answers: [
+        {
+          text: "Steven Spielberg",
+          correct: true,
+        },
+        {
+          text: "George Lucas",
+          correct: false,
+        },
+        {
+          text: "Martin Scorsese",
+          correct: false,
+        },
+        {
+          text: "Quentin Tarantino",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 82,
+      question: "Which team won the NBA Championship in 2001?",
+      answers: [
+        {
+          text: "San Antonio Spurs",
+          correct: false,
+        },
+        {
+          text: "Chicago Bulls",
+          correct: false,
+        },
+        {
+          text: "Los Angeles Lakers",
+          correct: true,
+        },
+        {
+          text: "Philadelphia 76ers",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 83,
+      question: "Which of these is not a color of the rainbow?",
+      answers: [
+        {
+          text: "Red",
+          correct: false,
+        },
+        {
+          text: "Indigo",
+          correct: false,
+        },
+        {
+          text: "Pink",
+          correct: true,
+        },
+        {
+          text: "Violet",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 84,
+      question: "Who wrote the novel 'One Hundred Years of Solitude'?",
+      answers: [
+        {
+          text: "Gabriel Garcia Marquez",
+          correct: true,
+        },
+        {
+          text: "Jorge Luis Borges",
+          correct: false,
+        },
+        {
+          text: "Pablo Neruda",
+          correct: false,
+        },
+        {
+          text: "Isabel Allende",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 85,
+      question: "What is the name of the national airline of Australia?",
+      answers: [
+        {
+          text: "Qantas",
+          correct: true,
+        },
+        {
+          text: "Virgin Australia",
+          correct: false,
+        },
+        {
+          text: "Jetstar",
+          correct: false,
+        },
+        {
+          text: "Tigerair Australia",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 86,
+      question: "In which year did the Spanish Civil War end?",
+      answers: [
+        {
+          text: "1936",
+          correct: false,
+        },
+        {
+          text: "1939",
+          correct: true,
+        },
+        {
+          text: "1945",
+          correct: false,
+        },
+        {
+          text: "1956",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 87,
+      question: "Who won the Academy Award for Best Actor in a Leading Role in 2021?",
+      answers: [
+        {
+          text: "Anthony Hopkins",
+          correct: true,
+        },
+        {
+          text: "Chadwick Boseman",
+          correct: false,
+        },
+        {
+          text: "Gary Oldman",
+          correct: false,
+        },
+        {
+          text: "Riz Ahmed",
+          correct: false,
+        },
+      ]
+    },
+    {
+      id: 88,
+      question: "Which US state is the smallest by land area?",
+      answers: [
+        {
+          text: "Rhode Island",
+          correct: true,
+        },
+        {
+          text: "Connecticut",
+          correct: false,
+        },
+        {
+          text: "Delaware",
+          correct: false,
+        },
+        {
+          text: "Hawaii",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 89,
+      question: "What is the largest animal on Earth?",
+      answers: [
+        {
+          text: "African elephant",
+          correct: false,
+        },
+        {
+          text: "Blue whale",
+          correct: true,
+        },
+        {
+          text: "Giraffe",
+          correct: false,
+        },
+        {
+          text: "Hippopotamus",
+          correct: false,
+        },
+      ],
+    }, 
+    {
+      id: 90,
+      question: "What is the highest waterfall in the world?",
+      answers: [
+        {
+          text: "Angel Falls",
+          correct: true,
+        },
+        {
+          text: "Niagara Falls",
+          correct: false,
+        },
+        {
+          text: "Iguazu Falls",
+          correct: false,
+        },
+        {
+          text: "Victoria Falls",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 91,
+      question: 'What year was the original "Jurassic Park" movie released?',
+      answers: [
+        {
+          text: "1989",
+          correct: false,
+        },
+        {
+          text: "1993",
+          correct: true,
+        },
+        {
+          text: "1997",
+          correct: false,
+        },
+        {
+          text: "2001",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 92,
+      question: "What is the deepest point in the ocean?",
+      answers: [
+        {
+          text: "Mariana Trench",
+          correct: true,
+        },
+        {
+          text: "Puerto Rico Trench",
+          correct: false,
+        },
+        {
+          text: "Java Trench",
+          correct: false,
+        },
+        {
+          text: "Philippine Trench",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 93,
+      question: "What is the name of the highest active volcano in Europe?",
+      answers: [
+        {
+          text: "Mount Vesuvius",
+          correct: false,
+        },
+        {
+          text: "Mount Etna",
+          correct: true,
+        },
+        {
+          text: "Mount Stromboli",
+          correct: false,
+        },
+        {
+          text: "Mount Teide",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 94,
+      question: "Which country won the first FIFA World Cup in 1930?",
+      answers: [
+        {
+          text: "Uruguay",
+          correct: true,
+        },
+        {
+          text: "Brazil",
+          correct: false,
+        },
+        {
+          text: "Argentina",
+          correct: false,
+        },
+        {
+          text: "Germany",
+          correct: false,
+        }
+      ],
+    },
+    {
+      id: 95,
+      question: "What is the largest island in the world?",
+      answers: [
+        {
+          text: "Greenland",
+          correct: true,
+        },
+        {
+          text: "Australia",
+          correct: false,
+        },
+        {
+          text: "Borneo",
+          correct: false,
+        },
+        {
+          text: "Madagascar",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 96,
+      question: "What is the name of the world's largest coral reef system?",
+      answers: [
+        {
+          text: "Great Barrier Reef",
+          correct: true,
+        },
+        {
+          text: "Coral Triangle",
+          correct: false,
+        },
+        {
+          text: "Red Sea Coral Reef",
+          correct: false,
+        },
+        {
+          text: "Mesoamerican Reef",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 97,
+      question: "What is the largest river in the world by volume?",
+      answers: [
+        {
+          text: "Nile River",
+          correct: false,
+        },
+        {
+          text: "Amazon River",
+          correct: true,
+        },
+        {
+          text: "Mississippi River",
+          correct: false,
+        },
+        {
+          text: "Yangtze River",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 98,
+      question: "What is the largest fish in the world?",
+      answers: [
+        {
+          text: "Tuna",
+          correct: false,
+        },
+        {
+          text: "Swordfish",
+          correct: false,
+        },
+        {
+          text: "Great White Shark",
+          correct: false,
+        },
+        {
+          text: "Whale Shark",
+          correct: true,
+        },
+      ]
+    },
+    {
+      id: 99,
+      question: "Who wrote the famous novel 'Pride and Prejudice'?",
+      answers: [
+        {
+          text: "Emily Bronte",
+          correct: false,
+        },
+        {
+          text: "Jane Austen",
+          correct: true,
+        },
+        {
+          text: "Charlotte Bronte",
+          correct: false,
+        },
+        {
+          text: "Virginia Woolf",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 100,
+      question: "When was first American football match played?",
+      answers: [
+        {
+          text: "1912",
+          correct: false,
+        },
+        {
+          text: "1869",
+          correct: true,
+        },
+        {
+          text: "1884",
+          correct: false,
+        },
+        {
+          text: "1933",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 101,
+      question: "Who was the first emperor of Rome?",
+      answers: [
+        {
+          text: "Augustus",
+          correct: true,
+        },
+        {
+          text: "Julius Caesar",
+          correct: false,
+        },
+        {
+          text: "Nero",
+          correct: false,
+        },
+        {
+          text: "Trajan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 102,
+      question: "Which two countries fought in the 'Hundred Years War'?",
+      answers: [
+        {
+          text: "France and Spain",
+          correct: false,
+        },
+        {
+          text: "England and Germany",
+          correct: false,
+        },
+        {
+          text: "France and England",
+          correct: true,
+        },
+        {
+          text: "Italy and Greece",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 103,
+      question: "Who was the first woman to be elected as the Prime Minister of a country?",
+      answers: [
+        {
+          text: "Golda Meir",
+          correct: true,
+        },
+        {
+          text: "Indira Gandhi",
+          correct: false,
+        },
+        {
+          text: "Margaret Thatcher",
+          correct: false,
+        },
+        {
+          text: "Benazir Bhutto",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 104,
+      question: "Who was the first African American Supreme Court Justice?",
+      answers: [
+        {
+          text: "Thurgood Marshall",
+          correct: true,
+        },
+        {
+          text: "Clarence Thomas",
+          correct: false,
+        },
+        {
+          text: "Ruth Bader Ginsburg",
+          correct: false,
+        },
+        {
+          text: "Sandra Day O'Connor",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 105,
+      question: "What was the last major battle of the American Civil War?",
+      answers: [
+        {
+          text: "Battle of Shiloh",
+          correct: false,
+        },
+        {
+          text: "Battle of Gettysburg",
+          correct: false,
+        },
+        {
+          text: "Battle of Antietam",
+          correct: false,
+        },
+        {
+          text: "Battle of Appomattox Courthouse",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 106,
+      question: "Who was the first U.S. president to be impeached?",
+      answers: [
+        {
+          text: "Richard Nixon",
+          correct: false,
+        },
+        {
+          text: "Andrew Johnson",
+          correct: true,
+        },
+        {
+          text: "Bill Clinton",
+          correct: false,
+        },
+        {
+          text: "Donald Trump",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 107,
+      question: "Which planet in our solar system has the shortest day?",
+      answers: [
+        {
+          text: "Mercury",
+          correct: false,
+        },
+        {
+          text: "Venus",
+          correct: false,
+        },
+        {
+          text: "Mars",
+          correct: false,
+        },
+        {
+          text: "Jupiter",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 108,
+      question: "Who was the first American astronaut to orbit the Earth?",
+      answers: [
+        {
+          text: "Alan Shepard",
+          correct: false,
+        },
+        {
+          text: "John Glenn",
+          correct: true,
+        },
+        {
+          text: "Neil Armstrong",
+          correct: false,
+        },
+        {
+          text: "Buzz Aldrin",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 109,
+      question: "What is the capital city of New Zealand?",
+      answers: [
+        {
+          text: "Wellington",
+          correct: true,
+        },
+        {
+          text: "Auckland",
+          correct: false,
+        },
+        {
+          text: "Christchurch",
+          correct: false,
+        },
+        {
+          text: "Queenstown",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 110,
+      question: "Which country was the first to recognize the independence of the United States?",
+      answers: [
+        {
+          text: "France",
+          correct: true,
+        },
+        {
+          text: "Spain",
+          correct: false,
+        },
+        {
+          text: "Great Britain",
+          correct: false,
+        },
+        {
+          text: "Germany",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 111,
+      question: "Who was the first U.S. president to visit China?",
+      answers: [
+        {
+          text: "Jimmy Carter",
+          correct: false,
+        },
+        {
+          text: "Richard Nixon",
+          correct: true,
+        },
+        {
+          text: "Ronald Reagan",
+          correct: false,
+        },
+        {
+          text: "Dwight Eisenhower",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 112,
+      question: "Who was the first European explorer to reach the Americas?",
+      answers: [
+        {
+          text: "Christopher Columbus",
+          correct: false,
+        },
+        {
+          text: "Ferdinand Magellan",
+          correct: false,
+        },
+        {
+          text: "Leif Erikson",
+          correct: true,
+        },
+        {
+          text: "Marco Polo",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 113,
+      question: "Which ancient civilization was responsible for the creation of the Pyramids of Giza?",
+      answers: [
+        {
+          text: "Persians",
+          correct: false,
+        },
+        {
+          text: "Greeks",
+          correct: false,
+        },
+        {
+          text: "Romans",
+          correct: false,
+        },
+        {
+          text: "Egyptians",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 114,
+      question: "What was the name of the ancient Chinese philosophy developed by Laozi?",
+      answers: [
+        {
+          text: "Taoism",
+          correct: true,
+        },
+        {
+          text: "Confucianism",
+          correct: false,
+        },
+        {
+          text: "Legalism",
+          correct: false,
+        },
+        {
+          text: "Buddhism",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 115,
+      question: "Which element is the main component of the Earth's core?",
+      answers: [
+        {
+          text: "Iron",
+          correct: true,
+        },
+        {
+          text: "Gold",
+          correct: false,
+        },
+        {
+          text: "Copper",
+          correct: false,
+        },
+        {
+          text: "Silver",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 116,
+      question: "Who wrote the novel 'Brave New World'?",
+      answers: [
+        {
+          text: "George Orwell",
+          correct: false,
+        },
+        {
+          text: "Aldous Huxley",
+          correct: true,
+        },
+        {
+          text: "Ray Bradbury",
+          correct: false,
+        },
+        {
+          text: "Margaret Atwood",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 117,
+      question: "In Herman Melville's 'Moby-Dick', what is the name of the ship's captain?",
+      answers: [
+        {
+          text: "Ishmael",
+          correct: false,
+        },
+        {
+          text: "Queequeg",
+          correct: false,
+        },
+        {
+          text: "Starbuck",
+          correct: false,
+        },
+        {
+          text: "Ahab",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 118,
+      question: "Which of these movies did not win the Academy Award for Best Picture in the year it was released?",
+      answers: [
+        { text: "Forrest Gump (1994)", correct: false },
+        { text: "Pulp Fiction (1994)", correct: true },
+        { text: "The Silence of the Lambs (1991)", correct: false },
+        { text: "The Godfather (1972)", correct: false },
+      ]
+    },
+    {
+      id: 119,
+      question: "What is the highest-grossing film of all time (not adjusted for inflation)?",
+      answers: [
+        { text: "Avengers: Endgame (2019)", correct: false },
+        { text: "Avatar (2009)", correct: true },
+        { text: "Titanic (1997)", correct: false },
+        { text: "Star Wars: The Force Awakens (2015)", correct: false },
+      ]
+    },
+    {
+      id: 120,
+      question: "Who wrote and performed the song 'Hallelujah', which has been covered by numerous artists and appeared in various movies and TV shows?",
+      answers: [
+        { text: "Bob Dylan", correct: false },
+        { text: "Johnny Cash", correct: false },
+        { text: "Tom Waits", correct: false },
+        { text: "Leonard Cohen", correct: true },
+      ]
+    },
+    {
+      id: 121,
+      question: "Which state is home to the world's largest natural arch, Rainbow Bridge?",
+      answers: [
+        { text: "Utah", correct: true },
+        { text: "Montana", correct: false },
+        { text: "Nebraska", correct: false },
+        { text: "Idaho", correct: false },
+      ]
+    },
+    {
+      id: 122,
+      question: "Which African country was formerly known as Abyssinia?",
+      answers: [
+        { text: "Egypt", correct: false },
+        { text: "Ethiopia", correct: true },
+        { text: "Morocco", correct: false },
+        { text: "Nigeria", correct: false },
+      ]
+    },
+    {
+      id: 123,
+      question: "What is the capital of Latvia?",
+      answers: [
+        { text: "Vilnius", correct: false },
+        { text: "Tallinn", correct: false },
+        { text: "Riga", correct: true },
+        { text: "Helsinki", correct: false },
+      ]
+    },
+    {
+      id: 124,
+      question: "What is the smallest bone in the human body?",
+      answers: [
+        { text: "Stapes", correct: true },
+        { text: "Femur", correct: false },
+        { text: "Radius", correct: false },
+        { text: "Tibia", correct: false },
+      ]
+    },
+    {
+      id: 125,
+      question: "What is the name of the river that flows through Baghdad?",
+      answers: [
+        { text: "Euphrates", correct: false },
+        { text: "Nile", correct: false },
+        { text: "Tigris", correct: true },
+        { text: "Danube", correct: false },
+      ]
+    },
+    {
+      id: 126,
+      question: "What is the largest bone in the human body?",
+      answers: [
+        { text: "Humerus", correct: false },
+        { text: "Femur", correct: true },
+        { text: "Fibula", correct: false },
+        { text: "Tibia", correct: false },
+      ]
+    },
+    {
+      id: 127,
+      question: "Who was the first female ruler of Egypt?",
+      answers: [
+        { text: "Cleopatra VII", correct: false },
+        { text: "Nefertiti", correct: false },
+        { text: "Hatshepsut", correct: true },
+        { text: "Isis", correct: false }
+      ]
+    },
+    {
+      id: 128,
+      question: "What was the name of the secret society that plotted the assassination of Archduke Franz Ferdinand, triggering the start of World War I?",
+      answers: [
+        { text: "The Black Hand", correct: true },
+        { text: "The Red Guard", correct: false },
+        { text: "The White Rose", correct: false },
+        { text: "The Illuminati", correct: false },
+      ]
+    },
+    {
+      id: 129,
+      question: "What was the name of the ship on which Charles Darwin traveled during his scientific expedition?",
+      answers: [
+        { text: "HMS Endeavour", correct: false },
+        { text: "HMS Discovery", correct: false },
+        { text: "HMS Bounty", correct: false },
+        { text: "HMS Beagle", correct: true },
+      ]
+    },
+    {
+      id: 130,
+      question: "Who was the last emperor of the Western Roman Empire?",
+      answers: [
+        { text: "Constantine the Great", correct: false },
+        { text: "Julius Caesar", correct: false },
+        { text: "Nero", correct: false },
+        { text: "Romulus Augustus", correct: true },
+      ]
+    },
+    {
+      id: 131,
+      question: "Which American president was responsible for the establishment of the Environmental Protection Agency (EPA)?",
+      answers: [
+        { text: "Richard Nixon", correct: true },
+        { text: "Franklin D. Roosevelt", correct: false },
+        { text: "Harry S. Truman", correct: false },
+        { text: "Dwight D. Eisenhower", correct: false }
+      ]
+    },
+    {
+      id: 132,
+      question: "What was the name of the Russian monk who became the adviser to Tsar Nicholas II and was eventually assassinated by the Bolsheviks in 1916?",
+      answers: [
+        { text: "Grigori Rasputin", correct: true },
+        { text: "Ivan the Terrible", correct: false },
+        { text: "Peter the Great", correct: false },
+        { text: "Joseph Stalin", correct: false }
+      ]
+    },
+    {
+      id: 133,
+      question: "What was the name of the French military leader who defeated the English at the Battle of Orleans in 1429?",
+      answers: [
+        { text: "Napoleon Bonaparte", correct: false },
+        { text: "Louis XIV", correct: false },
+        { text: "Charles de Gaulle", correct: false },
+        { text: "Joan of Arc", correct: true },
+      ]
+    },
+    {
+      id: 134,
+      question: "What was the name of the conflict between Athens and Sparta that lasted from 431-404 BCE?",
+      answers: [
+        { text: "Persian War", correct: false },
+        { text: "Peloponnesian War", correct: true },
+        { text: "Punic War", correct: false },
+        { text: "Theban War", correct: false }
+      ]
+    },
+    {
+      id: 135,
+      question: "Which ancient civilization is credited with inventing the first written language?",
+      answers: [
+        { text: "Egyptians", correct: false },
+        { text: "Chinese", correct: false },
+        { text: "Sumerians", correct: true },
+        { text: "Minoans", correct: false }
+      ]
+    },
+    {
+      id: 136,
+      question: "What is the most abundant gas in Earth's atmosphere?",
+      answers: [
+        {
+          text: "Nitrogen",
+          correct: true,
+        },
+        {
+          text: "Oxygen",
+          correct: false,
+        },
+        {
+          text: "Carbon dioxide",
+          correct: false,
+        },
+        {
+          text: "Helium",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 137,
+      question: "What is the name of the brightest star in the night sky?",
+      answers: [
+        {
+          text: "Sirius",
+          correct: true,
+        },
+        {
+          text: "Polaris",
+          correct: false,
+        },
+        {
+          text: "Betelgeuse",
+          correct: false,
+        },
+        {
+          text: "Vega",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 138,
+      question: "What is the largest volcano in the solar system?",
+      answers: [
+        {
+          text: "Olympus Mons",
+          correct: true,
+        },
+        {
+          text: "Mauna Loa",
+          correct: false,
+        },
+        {
+          text: "Mount Everest",
+          correct: false,
+        },
+        {
+          text: "Krakatoa",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 139,
+      question: "Which film won the Best Picture Oscar in 2020?",
+      answers: [
+        {
+          text: "Parasite",
+          correct: false,
+        },
+        {
+          text: "1917",
+          correct: false,
+        },
+        {
+          text: "Joker",
+          correct: false,
+        },
+        {
+          text: "Nomadland",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 140,
+      question: "Which battle ended the Napoleonic Wars?",
+      answers: [
+        {
+          text: "Battle of Waterloo",
+          correct: true,
+        },
+        {
+          text: "Battle of Trafalgar",
+          correct: false,
+        },
+        {
+          text: "Battle of Borodino",
+          correct: false,
+        },
+        {
+          text: "Battle of Austerlitz",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 141,
+      question: "Who was the first female prime minister of a European country?",
+      answers: [
+        {
+          text: "Angela Merkel",
+          correct: false,
+        },
+        {
+          text: "Indira Gandhi",
+          correct: false,
+        },
+        {
+          text: "Golda Meir",
+          correct: false,
+        },
+        {
+          text: "Margaret Thatcher",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 142,
+      question: "Which European country was the first to abolish the death penalty?",
+      answers: [
+        {
+          text: "Netherlands",
+          correct: true,
+        },
+        {
+          text: "France",
+          correct: false,
+        },
+        {
+          text: "Germany",
+          correct: false,
+        },
+        {
+          text: "United Kingdom",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 143,
+      question: "Which European monarch was known as the 'Sun King'?",
+      answers: [
+        {
+          text: "Charles V",
+          correct: false,
+        },
+        {
+          text: "Henry VIII",
+          correct: false,
+        },
+        {
+          text: "Louis XIV",
+          correct: true,
+        },
+        {
+          text: "Philip II",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 144,
+      question: "What is the term for a word that is derived from the name of a person or place?",
+      answers: [
+        {
+          text: "Eponym",
+          correct: true,
+        },
+        {
+          text: "Antonym",
+          correct: false,
+        },
+        {
+          text: "Homophone",
+          correct: false,
+        },
+        {
+          text: "Homonym",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 145,
+      question: "Which African country is the most populous?",
+      answers: [
+        {
+          text: "Egypt",
+          correct: false,
+        },
+        {
+          text: "Ethiopia",
+          correct: false,
+        },
+        {
+          text: "South Africa",
+          correct: false,
+        },
+        {
+          text: "Nigeria",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 146,
+      question: "What is the name of the mountain range that separates Europe and Asia?",
+      answers: [
+        {
+          text: "Himalaya Mountains",
+          correct: false,
+        },
+        {
+          text: "Ural Mountains",
+          correct: true,
+        },
+        {
+          text: "Andes Mountains",
+          correct: false,
+        },
+        {
+          text: "Rocky Mountains",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 147,
+      question: "What is the name of the strait that separates Asia and North America?",
+      answers: [
+        {
+          text: "Gibraltar Strait",
+          correct: false,
+        },
+        {
+          text: "Magellan Strait",
+          correct: false,
+        },
+        {
+          text: "Hormuz Strait",
+          correct: false,
+        },
+        {
+          text: "Bering Strait",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 148,
+      question: "Which African country is the largest by land area?",
+      answers: [
+        {
+          text: "Sudan",
+          correct: false,
+        },
+        {
+          text: "Libya",
+          correct: false,
+        },
+        {
+          text: "Democratic Republic of Congo",
+          correct: false,
+        },
+        {
+          text: "Algeria",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 149,
+      question: "What is the name of the longest river in Europe?",
+      answers: [
+        {
+          text: "Volga River",
+          correct: true,
+        },
+        {
+          text: "Danube River",
+          correct: false,
+        },
+        {
+          text: "Dnieper River",
+          correct: false,
+        },
+        {
+          text: "Rhine River",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 150,
+      question: "What is the name of the mountain range that runs through the western United States?",
+      answers: [
+        {
+          text: "Rocky Mountains",
+          correct: true,
+        },
+        {
+          text: "Appalachian Mountains",
+          correct: false,
+        },
+        {
+          text: "Sierra Nevada Mountains",
+          correct: false,
+        },
+        {
+          text: "Cascade Range",
+          correct: false,
+        },
+      ],
+    },
+  ], []);
 
   useEffect(() => {
     function generateRandomNumbers(min1, min2, min3, max1, max2, max3, count) {
@@ -1091,13 +3120,15 @@ function App() {
       }
       return numbers;
     }
-    setQuestionNumber(generateRandomNumbers(1, 16, 31, 15, 32, 47, 15));
+    setQuestionNumber(generateRandomNumbers(1, 51, 101, 50, 100, 150, 15));
   }, [])
 
   const [questionNumber, setQuestionNumber] = useState([]);
   const [questionID, setQuestionID] = useState(1);
   const [lost, setLost] = useState(false);
+  const [won, setWon] = useState(false);
   const [earned, setEarned] = useState("$0");
+  const [start, setStart] = useState(true);
 
   const moneyValues = useMemo(() =>
     [
@@ -1124,6 +3155,7 @@ function App() {
   
   return (
     <>
+    {data.map(question => console.log(question.id))}
     <div className='app'>
       <div className='flex min-h-screen bg-darkblue text-white'>
         {/* Left Container */}
@@ -1139,21 +3171,36 @@ function App() {
               <br />
             </div>
           :
-          (
-          <>
-            <div className='top h-1/2'></div>
-            <div className='bottom h-1/2'>
-              <Trivia
-                data={data}
-                questionNumber={questionNumber}
-                setQuestionNumber={setQuestionNumber}
-                setLost={setLost}
-                questionID={questionID}
-                setQuestionID={setQuestionID}
-              />
-            </div>
-          </>
-          )}
+          won ? 
+            <div className='h-72 m-auto mb-24 w-full bg-darkblue border-6 text-center text-4xl'>
+            Congratulations! You Win $1000000!
+            <br/>
+            <button className='rounded-full border-8 border-white p-4 hover:bg-green-500 mt-12'
+              onClick={() => window.location.reload()}>
+              Try again?
+            </button>
+          </div>
+          :
+          start ? 
+          <Start setStart={setStart} />
+          :
+            (
+            <>
+              <div className='top h-1/2'></div>
+              <div className='bottom h-1/2'>
+                <Trivia
+                  data={data}
+                  questionNumber={questionNumber}
+                  setQuestionNumber={setQuestionNumber}
+                  setWon={setWon}
+                  setLost={setLost}
+                  questionID={questionID}
+                  setQuestionID={setQuestionID}
+                />
+              </div>
+            </>
+            )
+          }
         </div>
 
         {/* Right Container */}
