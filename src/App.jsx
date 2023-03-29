@@ -2392,16 +2392,16 @@ function App() {
       question: "What is the capital city of New Zealand?",
       answers: [
         {
-          text: "Wellington",
-          correct: true,
-        },
-        {
           text: "Auckland",
           correct: false,
         },
         {
           text: "Christchurch",
           correct: false,
+        },
+        {
+          text: "Wellington",
+          correct: true,
         },
         {
           text: "Queenstown",
@@ -2682,7 +2682,7 @@ function App() {
         { text: "Cleopatra VII", correct: false },
         { text: "Nefertiti", correct: false },
         { text: "Hatshepsut", correct: true },
-        { text: "Isis", correct: false }
+        { text: "Isis", correct: false },
       ]
     },
     {
@@ -2722,7 +2722,7 @@ function App() {
         { text: "Richard Nixon", correct: true },
         { text: "Franklin D. Roosevelt", correct: false },
         { text: "Harry S. Truman", correct: false },
-        { text: "Dwight D. Eisenhower", correct: false }
+        { text: "Dwight D. Eisenhower", correct: false },
       ]
     },
     {
@@ -2732,7 +2732,7 @@ function App() {
         { text: "Grigori Rasputin", correct: true },
         { text: "Ivan the Terrible", correct: false },
         { text: "Peter the Great", correct: false },
-        { text: "Joseph Stalin", correct: false }
+        { text: "Joseph Stalin", correct: false },
       ]
     },
     {
@@ -2752,17 +2752,17 @@ function App() {
         { text: "Persian War", correct: false },
         { text: "Peloponnesian War", correct: true },
         { text: "Punic War", correct: false },
-        { text: "Theban War", correct: false }
+        { text: "Theban War", correct: false },
       ]
     },
     {
       id: 135,
       question: "Which ancient civilization is credited with inventing the first written language?",
       answers: [
-        { text: "Egyptians", correct: false },
-        { text: "Chinese", correct: false },
-        { text: "Sumerians", correct: true },
-        { text: "Minoans", correct: false }
+        { text: "Egyptians", correct: false, },
+        { text: "Chinese", correct: false, },
+        { text: "Sumerians", correct: true, },
+        { text: "Minoans", correct: false, },
       ]
     },
     {
@@ -3120,7 +3120,7 @@ function App() {
       }
       return numbers;
     }
-    setQuestionNumber(generateRandomNumbers(1, 51, 101, 50, 100, 150, 15));
+    setQuestionNumber(generateRandomNumbers(1, 51, 101, 50, 100, 149, 15));
   }, [])
 
   const [questionNumber, setQuestionNumber] = useState([]);
@@ -3155,7 +3155,7 @@ function App() {
   
   return (
     <>
-    {data.map(question => console.log(question.id))}
+    {data.map(question => console.log(question.answers))}
     <div className='app'>
       <div className='flex min-h-screen bg-darkblue text-white'>
         {/* Left Container */}
