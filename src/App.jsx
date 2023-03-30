@@ -649,7 +649,7 @@ function App() {
     },
     {
       id: 30,
-      question: "Which famous novel by Mark Twain features the characters Tom Sawyer and Huckleberry Finn?",
+      question: "Which famous novel by Mark Twain features the character Tom Sawyer?",
       answers: [
         {
           text: "Adventures of Sherlock Holmes",
@@ -3096,7 +3096,7 @@ function App() {
       ],
     },
     {
-      id: 150,
+      id: 151,
       question: "What is the name of the largest glacier outside of the polar regions?",
       answers: [
         {
@@ -3109,16 +3109,16 @@ function App() {
         },
         {
           text: "Fedchenko Glacier",
-          correct: false,
+          correct: true,
         },
         {
           text: "Siachen Glacier",
-          correct: true,
+          correct: false,
         },
       ],
     },
     {
-      id: 151,
+      id: 152,
       question: "Which book holds the world record for being the most stolen from public libraries?",
       answers: [
         {
@@ -3138,7 +3138,1064 @@ function App() {
           correct: true,
         },
       ],
-    }
+    },
+    {
+      id: 153,
+      question: "What is the name of the largest flower in the world?",
+      answers: [
+        {
+          text: "Corpse flower",
+          correct: false,
+        },
+        {
+          text: "Rafflesia",
+          correct: true,
+        },
+        {
+          text: "Titan arum",
+          correct: false,
+        },
+        {
+          text: "Lily of the valley",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 154,
+      question: "Which element on the periodic table has the highest melting point?",
+      answers: [
+        {
+          text: "Tungsten",
+          correct: true,
+        },
+        {
+          text: "Carbon",
+          correct: false,
+        },
+        {
+          text: "Titanium",
+          correct: false,
+        },
+        {
+          text: "Platinum",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 155,
+      question: "What is the name of the only bird that can fly backwards?",
+      answers: [
+        {
+          text: "Ostrich",
+          correct: false,
+        },
+        {
+          text: "Penguin",
+          correct: false,
+        },
+        {
+          text: "Emu",
+          correct: false,
+        },
+        {
+          text: "Hummingbird",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 156,
+      question: "What is the name of the tallest building in the world?",
+      answers: [
+        {
+          text: "Burj Khalifa",
+          correct: true,
+        },
+        {
+          text: "Shanghai Tower",
+          correct: false,
+        },
+        {
+          text: "Abraj Al Bait Clock Tower",
+          correct: false,
+        },
+        {
+          text: "One World Trade Center",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 157,
+      question: "What is the name of the instrument used to measure wind speed ?",
+      answers: [
+        {
+          text: "Barometer",
+          correct: false,
+        },
+        {
+          text: "Anemometer",
+          correct: true,
+        },
+        {
+          text: "Hygrometer",
+          correct: false,
+        },
+        {
+          text: "Thermometer",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 158,
+      question: "What is the name of the largest species of kangaroo?",
+      answers: [
+        {
+          text: "Eastern Grey Kangaroo",
+          correct: false,
+        },
+        {
+          text: "Red Kangaroo",
+          correct: true,
+        },
+        {
+          text: "Western Grey Kangaroo",
+          correct: false,
+        },
+        {
+          text: "Antilopine Kangaroo",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 159,
+      question: "What is the name of the currency used in Thailand?",
+      answers: [
+        {
+          text: "Rupee",
+          correct: false,
+        },
+        {
+          text: "Yen",
+          correct: false,
+        },
+        {
+          text: "Dollar",
+          correct: false,
+        },
+        {
+          text: "Baht",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 160,
+      question: "What is the name of the active volcano in Italy that destroyed the ancient Roman city of Pompeii?",
+      answers: [
+        {
+          text: "Mount Etna",
+          correct: false,
+        },
+        {
+          text: "Mount Vesuvius",
+          correct: true,
+        },
+        {
+          text: "Mount Stromboli",
+          correct: false,
+        },
+        {
+          text: "Mount Pinatubo",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 161,
+      question: "What famous document begins with the words 'When in the course of human events'?",
+      answers: [
+        {
+          text: "The Magna Carta",
+          correct: false,
+        },
+        {
+          text: "The Bill of Rights",
+          correct: false,
+        },
+        {
+          text: "The Declaration of Independence",
+          correct: true,
+        },
+        {
+          text: "The Emancipation Proclamation",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 162,
+      question: "What ancient civilization built Machu Picchu?",
+      answers: [
+        {
+          text: "Aztec",
+          correct: false,
+        },
+        {
+          text: "Inca",
+          correct: true,
+        },
+        {
+          text: "Maya",
+          correct: false,
+        },
+        {
+          text: "Egyptian",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 163,
+      question: "Who was the last emperor of Russia?",
+      answers: [
+        {
+          text: "Nicholas II",
+          correct: true,
+        },
+        {
+          text: "Alexander III",
+          correct: false,
+        },
+        {
+          text: "Peter the Great",
+          correct: false,
+        },
+        {
+          text: "Ivan the Terrible",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 164,
+      question: "What is the name of the chemical process by which cells convert glucose into ATP?",
+      answers: [
+        {
+          text: "Photosynthesis",
+          correct: false,
+        },
+        {
+          text: "Glycolysis",
+          correct: false,
+        },
+        {
+          text: "Fermentation",
+          correct: false,
+        },
+        {
+          text: "Cellular respiration",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 165,
+      question: "What is the name of the organelle responsible for the synthesis and modification of lipids and proteins in eukaryotic cells?",
+      answers: [
+        {
+          text: "Endoplasmic reticulum",
+          correct: true,
+        },
+        {
+          text: "Golgi apparatus",
+          correct: false,
+        },
+        {
+          text: "Mitochondria",
+          correct: false,
+        },
+        {
+          text: "Lysosome",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 166,
+      question: "What is the name of the process by which a cell engulfs a large particle by forming a membrane-bound vesicle around it?",
+      answers: [
+        {
+          text: "Exocytosis",
+          correct: false,
+        },
+        {
+          text: "Pinocytosis",
+          correct: false,
+        },
+        {
+          text: "Endocytosis",
+          correct: true,
+        },
+        {
+          text: "Phagocytosis",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 167,
+      question: "What is the term used to describe a substance that speeds up a chemical reaction without being consumed in the reaction?",
+      answers: [
+        {
+          text: "Reactant",
+          correct: false,
+        },
+        {
+          text: "Product",
+          correct: false,
+        },
+        {
+          text: "Inhibitor",
+          correct: false,
+        },
+        {
+          text: "Catalyst",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 168,
+      question: "What was the name of the 16th century religious reformer who founded the Church of England?",
+      answers: [
+        {
+          text: "Martin Luther",
+          correct: false,
+        },
+        {
+          text: "Henry VIII",
+          correct: true,
+        },
+        {
+          text: "John Calvin",
+          correct: false,
+        },
+        {
+          text: "John Wesley",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 169,
+      question: "What was the name of the 18th century Enlightenment philosopher who wrote the famous work 'The Social Contract'?",
+      answers: [
+        {
+          text: "Jean-Jacques Rousseau",
+          correct: true,
+        },
+        {
+          text: "Thomas Hobbes",
+          correct: false,
+        },
+        {
+          text: "John Locke",
+          correct: false,
+        },
+        {
+          text: "Baron de Montesquieu",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 170,
+      question: "What was the name of the first successful English colony in the Americas, established in 1607?",
+      answers: [
+        {
+          text: "Plymouth",
+          correct: false,
+        },
+        {
+          text: "Roanoke",
+          correct: false,
+        },
+        {
+          text: "Massachusetts Bay",
+          correct: false,
+        },
+        {
+          text: "Jamestown",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 171,
+      question: "In what year did the French Revolution begin?",
+      answers: [
+        {
+          text: "1756",
+          correct: false,
+        },
+        {
+          text: "1776",
+          correct: false,
+        },
+        {
+          text: "1789",
+          correct: true,
+        },
+        {
+          text: "1792",
+          correct: false,
+        },
+      ]
+    },
+    {
+      id: 172,
+      question: "Which war between France and England began in 1756 and had major battles fought on four different continents?",
+      answers: [
+        {
+          text: "Seven Years' War",
+          correct: true,
+        },
+        {
+          text: "Hundred Years' War",
+          correct: false,
+        },
+        {
+          text: "Napoleonic Wars",
+          correct: false,
+        },
+        {
+          text: "American Revolutionary War",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 173,
+      question: "When was personal income tax first introduced in America?",
+      answers: [
+        {
+          text: "1854",
+          correct: false,
+        },
+        {
+          text: "1901",
+          correct: false,
+        },
+        {
+          text: "1876",
+          correct: false,
+        },
+        {
+          text: "1861",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 174,
+      question: "What was the name of the dynasty that ruled ancient Egypt during the period known as the New Kingdom, from about 1550 BCE to 1070 BCE?",
+      answers: [
+        {
+          text: "Eighteenth Dynasty",
+          correct: true,
+        },
+        {
+          text: "Twelfth Dynasty",
+          correct: false,
+        },
+        {
+          text: "Twenty-sixth Dynasty",
+          correct: false,
+        },
+        {
+          text: "Ptolemaic Dynasty",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 175,
+      question: "Who founded the Achaemenid Empire?",
+      answers: [
+        {
+          text: "Alexander the Great",
+          correct: false,
+        },
+        {
+          text: "Darius the Great",
+          correct: false,
+        },
+        {
+          text: "Cyrus the Great",
+          correct: true,
+        },
+        {
+          text: "Xerxes the Great",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 176,
+      question: "Who was the first European explorer to reach India by sea in the late 15th century?",
+      answers: [
+        {
+          "text": "Christopher Columbus",
+          "correct": false
+        },
+        {
+          "text": "Ferdinand Magellan",
+          "correct": false
+        },
+        {
+          "text": "Vasco da Gama",
+          "correct": true
+        },
+        {
+          "text": "Francisco Pizarro",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 177,
+      question: "What was the first animal to be sent into space?",
+      answers: [
+        {
+          "text": "Dog",
+          "correct": true
+        },
+        {
+          "text": "Monkey",
+          "correct": false
+        },
+        {
+          "text": "Mouse",
+          "correct": false
+        },
+        {
+          "text": "Rabbit",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 178,
+      question: "Who composed the famous opera 'The Marriage of Figaro'?",
+      answers: [
+        {
+          "text": "Ludwig van Beethoven",
+          "correct": false
+        },
+        {
+          "text": "Wolfgang Amadeus Mozart",
+          "correct": true
+        },
+        {
+          "text": "Giuseppe Verdi",
+          "correct": false
+        },
+        {
+          "text": "Richard Wagner",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 179,
+      question: "Who was the first female monarch of England?",
+      answers: [
+        {
+          "text": "Mary I",
+          "correct": true
+        },
+        {
+          "text": "Elizabeth I",
+          "correct": false
+        },
+        {
+          "text": "Anne",
+          "correct": false
+        },
+        {
+          "text": "Victoria",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 180,
+      question: "Who was the leader of the Ottoman Empire during its conquest of Constantinople?",
+      answers: [
+        {
+          "text": "Suleiman the Magnificent",
+          "correct": false
+        },
+        {
+          "text": "Mehmed II",
+          "correct": true
+        },
+        {
+          "text": "Selim I",
+          "correct": false
+        },
+        {
+          "text": "Murad II",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 181,
+      question: "Which two European countries fought in the War of the Roses?",
+      answers: [
+        {
+          "text": "England and France",
+          "correct": false
+        },
+        {
+          "text": "England and Scotland",
+          "correct": false
+        },
+        {
+          "text": "Spain and Portugal",
+          "correct": false
+        },
+        {
+          "text": "York and Lancaster",
+          "correct": true
+        }
+      ]
+    },
+    {
+      id: 182,
+      question: "Which emperor is famous for constructing the Forbidden City in Beijing, China?",
+      answers: [
+        {
+          "text": "Emperor Kangxi",
+          "correct": false
+        },
+        {
+          "text": "Emperor Qianlong",
+          "correct": false
+        },
+        {
+          "text": "Emperor Yongle",
+          "correct": true
+        },
+        {
+          "text": "Emperor Hongwu",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 183,
+      question: "Which two countries fought in the Boer War?",
+      answers: [
+        {
+          "text": "Britain and France",
+          "correct": false
+        },
+        {
+          "text": "Britain and Germany",
+          "correct": false
+        },
+        {
+          "text": "Britain and South African Republic",
+          "correct": true
+        },
+        {
+          "text": "Britain and Spain",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 184,
+      question: "Which Roman emperor famously declared himself to be a god?",
+      answers: [
+        {
+          "text": "Julius Caesar",
+          "correct": false
+        },
+        {
+          "text": "Nero",
+          "correct": true
+        },
+        {
+          "text": "Augustus",
+          "correct": false
+        },
+        {
+          "text": "Trajan",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 185,
+      question: "What is the capital city of Kazakhstan?",
+      answers: [
+        {
+          "text": "Almaty",
+          "correct": false
+        },
+        {
+          "text": "Astana",
+          "correct": true
+        },
+        {
+          "text": "Tashkent",
+          "correct": false
+        },
+        {
+          "text": "Bishkek",
+          "correct": false
+        }
+      ]
+    },
+    
+    {
+      id: 186,
+      question: "Who led the Haitian Revolution against France in the late 18th century?",
+      answers: [
+        {
+          "text": "Toussaint L'Ouverture",
+          "correct": true
+        },
+        {
+          "text": "Simon Bolivar",
+          "correct": false
+        },
+        {
+          "text": "Emperor Haile Selassie",
+          "correct": false
+        },
+        {
+          "text": "Nelson Mandela",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 187,
+      question: "In the film 'No Country for Old Men,' what type of weapon does the antagonist, Anton Chigurh, use to kill his victims?",
+      answers: [
+        {
+          "text": "A knife",
+          "correct": false
+        },
+        {
+          "text": "A shotgun",
+          "correct": false
+        },
+        {
+          "text": "A bolt pistol",
+          "correct": true
+        },
+        {
+          "text": "A crossbow",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 188,
+      question: "Who plays the lead role of Elliot Alderson in the TV series 'Mr. Robot'?",
+      answers: [
+        {
+          "text": "Christian Slater",
+          "correct": false
+        },
+        {
+          "text": "Rami Malek",
+          "correct": true
+        },
+        {
+          "text": "B.D. Wong",
+          "correct": false
+        },
+        {
+          "text": "Michael Cristofer",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 189,
+      question: "Who directed the 1979 science fiction horror film 'Alien'?",
+      answers: [
+        {
+          "text": "Ridley Scott",
+          "correct": true
+        },
+        {
+          "text": "Steven Spielberg",
+          "correct": false
+        },
+        {
+          "text": "James Cameron",
+          "correct": false
+        },
+        {
+          "text": "George Lucas",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 190,
+      question: "When was the website 'Myspace' founded?",
+      answers: [
+        {
+          "text": "2000",
+          "correct": false
+        },
+        {
+          "text": "2003",
+          "correct": true
+        },
+        {
+          "text": "2006",
+          "correct": false
+        },
+        {
+          "text": "2009",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 191,
+      question: "What is the largest lake in Africa by volume?",
+      answers: [
+        {
+          "text": "Lake Victoria",
+          "correct": true
+        },
+        {
+          "text": "Lake Tanganyika",
+          "correct": false
+        },
+        {
+          "text": "Lake Malawi",
+          "correct": false
+        },
+        {
+          "text": "Lake Chad",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 192,
+      question: "Which island in the Caribbean Sea is divided between two countries, France and the Netherlands?",
+      answers: [
+        {
+          "text": "Barbados",
+          "correct": false
+        },
+        {
+          "text": "Jamaica",
+          "correct": false
+        },
+        {
+          "text": "Saint Lucia",
+          "correct": false
+        },
+        {
+          "text": "Saint Martin",
+          "correct": true
+        }
+      ]
+    },
+    {
+      id: 193,
+      question: "What was the title of Michael Jackson's best-selling album of the 1980s?",
+      answers: [
+        {
+        "text": "Bad",
+        "correct": false
+        },
+        {
+        "text": "Thriller",
+        "correct": true
+        },
+        {
+        "text": "Off the Wall",
+        "correct": false
+        },
+        {
+        "text": "Dangerous",
+        "correct": false
+        }
+      ]
+    },
+    {
+      id: 194,
+      question: "Which 80s band released the album 'Purple Rain'?",
+      answers: [
+        {
+        "text": "The Police",
+        "correct": false
+        },
+        {
+        "text": "Wham!",
+        "correct": false
+        },
+        {
+        "text": "Prince and the Revolution",
+        "correct": true
+        },
+        {
+        "text": "Duran Duran",
+        "correct": false
+        }
+      ]
+    },
+    {
+      id: 195,
+      question: "What was the name of the Byzantine emperor who codified Roman law?",
+      answers: [
+        {
+          "text": "Justinian I",
+          "correct": true
+        },
+        {
+          "text": "Heraclius",
+          "correct": false
+        },
+        {
+          "text": "Constantine XI",
+          "correct": false
+        },
+        {
+          "text": "Basil II",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 196,
+      question: "What is the name of the oldest university in the English-speaking world?",
+      answers: [
+        {
+          "text": "University of Cambridge",
+          "correct": false
+        },
+        {
+          "text": "University of Oxford",
+          "correct": true
+        },
+        {
+          "text": "Harvard University",
+          "correct": false
+        },
+        {
+          "text": "Yale University",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 197,
+      question: "What is the name of the disease caused by the bacterium Yersinia pestis?",
+      answers: [
+        {
+          "text": "Leprosy",
+          "correct": false
+        },
+        {
+          "text": "Plague",
+          "correct": true
+        },
+        {
+          "text": "Tuberculosis",
+          "correct": false
+        },
+        {
+          "text": "Cholera",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 198,
+      question: "What is the name of the type of Japanese noodles made from buckwheat flour?",
+      answers: [
+        {
+          "text": "Soba",
+          "correct": true
+        },
+        {
+          "text": "Udon",
+          "correct": false
+        },
+        {
+          "text": "Ramen",
+          "correct": false
+        },
+        {
+          "text": "Somen",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 199,
+      question: "What is the main ingredient in a traditional paella recipe?",
+      answers: [
+        {
+          "text": "Rice",
+          "correct": true
+        },
+        {
+          "text": "Pasta",
+          "correct": false
+        },
+        {
+          "text": "Couscous",
+          "correct": false
+        },
+        {
+          "text": "Quinoa",
+          "correct": false
+        }
+      ]
+    },
+    {
+      id: 200,
+      question: "What type of food is paneer?",
+      answers: [
+        {
+          "text": "Cheese",
+          "correct": true
+        },
+        {
+          "text": "Bread",
+          "correct": false
+        },
+        {
+          "text": "Meat",
+          "correct": false
+        },
+        {
+          "text": "Vegetable",
+          "correct": false
+        }
+      ]
+    },
   ], []);
 
   useEffect(() => {
@@ -3146,19 +4203,19 @@ function App() {
     function generateUniqueRandomNumbers() {
       const result = new Set();
       
-      // generate first 5 unique numbers from 1-50
+      // generate first 5 unique numbers 
       while (result.size < 5) {
-        result.add(Math.floor(Math.random() * 50) + 1);
+        result.add(Math.floor(Math.random() * 66));
       }
       
-      // generate next 5 unique numbers from 51-100
+      // generate next 5 unique numbers 
       while (result.size < 10) {
-        result.add(Math.floor(Math.random() * 50) + 51);
+        result.add(Math.floor(Math.random() * 66) + 67);
       }
       
-      // generate last 5 unique numbers from 101-150
+      // generate last 5 unique numbers
       while (result.size < 15) {
-        result.add(Math.floor(Math.random() * 50) + 101);
+        result.add(Math.floor(Math.random() * 66) + 133);
       }
       
       return Array.from(result); // creates array from set
