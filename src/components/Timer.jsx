@@ -11,7 +11,7 @@ export default function Timer({setLost, setWon, questionNumber, selectedAnswer, 
   const [timer, setTimer] = useState(30);
 
   useEffect(() => {
-    if(selectedAnswer) setTimer(30); //reset timer
+    if(selectedAnswer) setTimer(30); // reset timer when answer is selected
     if(timer === 0) return setLost(true);
 
     let timerInterval = setInterval(() => {
@@ -19,7 +19,7 @@ export default function Timer({setLost, setWon, questionNumber, selectedAnswer, 
     }, 1000);
 
     return () => clearInterval(timerInterval);
-  }, [selectedAnswer, setLost, timer]);
+  }, [selectedAnswer, timer]);
 
   useEffect(() => {
     setTimer(30);

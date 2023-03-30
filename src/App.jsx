@@ -3173,7 +3173,7 @@ function App() {
   const [lost, setLost] = useState(false);
   const [won, setWon] = useState(false);
   const [earned, setEarned] = useState("$0");
-  const [start, setStart] = useState(true);
+  const [start, setStart] = useState(true); //
 
   const moneyValues = useMemo(() =>
     [
@@ -3204,7 +3204,11 @@ function App() {
       <div className='flex min-h-screen bg-darkblue text-white'>
         {/* Left Container */}
         <div className='main w-3/4 bg-[url("../set.jpg")] bg-cover flex flex-col'>
-          {lost ? //check defeat condition
+          {
+          start ? //check start condition (this will be the default condition every time user visits page)
+            <Start setStart={setStart} />
+          :
+          lost ? //check defeat condition
             <div className='h-72 m-auto mb-24 w-full bg-darkblue border-6 text-center text-4xl'>
               You earned {earned}!
               <br />
@@ -3224,10 +3228,7 @@ function App() {
               Try again?
             </button>
           </div>
-          :
-          start ? //check start
-          <Start setStart={setStart} />
-          :
+          : //lost, won, start are all false, render trivia component
             (
             <>
               <div className='top h-1/2'></div>
@@ -3235,7 +3236,6 @@ function App() {
                 <Trivia
                   data={data}
                   questionNumber={questionNumber}
-                  setQuestionNumber={setQuestionNumber}
                   setWon={setWon}
                   setLost={setLost}
                   questionID={questionID}
@@ -3251,7 +3251,7 @@ function App() {
         <div className='w-1/4'>
           <ul className='p-5 mt-24'>
 
-            {moneyValues.map((each) =>
+            {moneyValues.map((each) => //map each value in moneyValues and render to right side of page
             (
               <li className={`flex p-1 ${questionID === each.id ? 'bg-orange-500' : ''}`}
                 key={each.id}>

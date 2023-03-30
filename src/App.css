@@ -26,3 +26,11 @@
 .answer.active {
   background-color: orange;
 }
+
+.answer.correct {
+  background-color: green;
+}
+
+.answer.wrong {
+  background-color: red;
+}

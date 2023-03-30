@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Timer from './Timer';
 
-function Trivia({data, questionNumber, setQuestionNumber, setWon, setLost, questionID, setQuestionID}) {
+function Trivia({data, questionNumber, setWon, setLost, questionID, setQuestionID}) {
 
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -21,6 +21,14 @@ function Trivia({data, questionNumber, setQuestionNumber, setWon, setLost, quest
   function handleClick(answer) {
     setSelectedAnswer(answer);
     setClassName('answer active');
+    delay(500, () => {
+      if(answer.correct) {
+        setClassName('answer correct');
+      }
+      else {
+        setClassName('answer wrong');
+      }
+    })
     delay(1000, () => {
       if(answer.correct){
         setQuestionID(prev => prev + 1);
