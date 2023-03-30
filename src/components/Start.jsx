@@ -14,7 +14,7 @@ export default function Start({setStart}) {
       <div className='h-1/2'></div>
       <div className='text-2xl bg-darkblue w-full items-center justify-center text-center space-y-6'>
       <div>
-        "Who Wants To Be A Millionaire" was one of my favorite game shows as a child, 
+        "Who Wants To Be A Millionaire" was one of my favorite game shows growing up, 
         <br/>
         so naturally it occurred to me as a fun and exciting project to create.
       </div>
@@ -26,7 +26,7 @@ export default function Start({setStart}) {
         You will encounter more difficult questions as you progress. 
       </div>
       <div>
-        I hope you will have as much fun playing the game as I did making it!
+        I hope you will have as much fun playing the game as I did making it.
       </div>
       <div>
         Created with ReactJS, TailwindCSS, and Vite. 
@@ -56,30 +56,30 @@ export default function Start({setStart}) {
           Please feel free to reach out at any of the links below:
         </div>
         <div>
-          <a href = "#" className='hover:bg-orange-400'
+          <button href = "#" className='hover:bg-[#CE3C30]'
           onClick = {() => {
             navigator.clipboard.writeText('davidwang20000@gmail.com')
             alert('Email copied to clipboard!')
           }}>
-            <CgMail className='absolute ml-[8rem] mt-1'/>
+            <CgMail className='inline mr-2'/>
             Email: davidwang20000@gmail.com (Click to copy)
-          </a>
+          </button>
         </div>
         <div>
           <a href = "tel:[210-454-3264]" className='hover:bg-sky-400'>
-            <BsTelephone className='absolute ml-[15rem] mt-1'/>
+            <BsTelephone className='inline mr-2'/>
             Phone: (210) 454-3264 (Click to call)
           </a>
         </div>
         <div>
           <a href = "https://www.linkedin.com/in/david-w-79568257/" className='hover:bg-indigo-400 relative'>
-            <AiFillLinkedin className='absolute ml-[26rem] mt-1'/>
+          <AiFillLinkedin className='inline mr-2'/>
             LinkedIn (Click) 
           </a>
         </div>
         <div>
-          <a href = "https://github.com/davidwangdev" className='hover:bg-red-400'>
-          <BsGithub className='absolute ml-[26rem] mt-1'/>
+          <a href = "https://github.com/davidwangdev" className='hover:bg-[#1F6FEB]'>
+          <BsGithub className='inline mr-2'/>
             GitHub (Click)
           </a>
         </div>

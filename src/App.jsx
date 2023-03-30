@@ -740,16 +740,16 @@ function App() {
       question: "Who wrote the famous novel '1984'?",
       answers: [
       {
-      text: "George Orwell",
-      correct: true,
-      },
-      {
       text: "Aldous Huxley",
       correct: false,
       },
       {
       text: "F. Scott Fitzgerald",
       correct: false,
+      },
+      {
+        text: "George Orwell",
+        correct: true,
       },
       {
       text: "Ernest Hemingway",
@@ -894,10 +894,6 @@ function App() {
       question: "What is the name of the first woman to win a Nobel Prize?",
       answers: [
         {
-          text: "Marie Curie",
-          correct: true,
-        },
-        {
           text: "Rosalind Franklin",
           correct: false,
         },
@@ -908,6 +904,10 @@ function App() {
         {
           text: "Lise Meitner",
           correct: false,
+        },
+        {
+          text: "Marie Curie",
+          correct: true,
         },
       ],
     },
@@ -1092,16 +1092,16 @@ function App() {
       question: "Who is the current president of France?",
       answers: [
         {
-          text: "Emmanuel Macron",
-          correct: true,
-        },
-        {
           text: "François Hollande",
           correct: false,
         },
         {
           text: "Nicolas Sarkozy",
           correct: false,
+        },
+        {
+          text: "Emmanuel Macron",
+          correct: true,
         },
         {
           text: "Jacques Chirac",
@@ -1114,12 +1114,12 @@ function App() {
       question: "What is the scientific name for the human tailbone?",
       answers: [
         {
-          text: "Coccyx",
-          correct: true,
-        },
-        {
           text: "Sacrum",
           correct: false,
+        },
+        {
+          text: "Coccyx",
+          correct: true,
         },
         {
           text: "Femur",
@@ -1133,12 +1133,8 @@ function App() {
     },
     {
       id: 52,
-      question: "Which country is both the largest producer of coffee in the world?",
+      question: "Which country is the largest producer of coffee in the world?",
       answers: [
-        {
-          text: "Brazil",
-          correct: true,
-        },
         {
           text: "Colombia",
           correct: false,
@@ -1150,6 +1146,10 @@ function App() {
         {
           text: "Vietnam",
           correct: false,
+        },
+        {
+          text: "Brazil",
+          correct: true,
         },
       ],
     }, 
@@ -1400,16 +1400,16 @@ function App() {
       question: "What is the process by which plants convert light energy into chemical energy?",
       answers: [
         {
-          text: "Photosynthesis",
-          correct: true,
-        },
-        {
           text: "Respiration",
           correct: false,
         },
         {
           text: "Fermentation",
           correct: false,
+        },
+        {
+          text: "Photosynthesis",
+          correct: true,
         },
         {
           text: "Digestion",
@@ -1729,22 +1729,22 @@ function App() {
     },
     {
       id: 79,
-      question: "What is the capital of South Africa?",
+      question: "What is the capital of Croatia?",
       answers: [
         {
-          text: "Cape Town",
+          text: "Pula",
           correct: false,
         },
         {
-          text: "Pretoria",
+          text: "Zagreb",
           correct: true,
         },
         {
-          text: "Johannesburg",
+          text: "Zadar",
           correct: false,
         },
         {
-          text: "Durban",
+          text: "Trogir",
           correct: false,
         },
       ],
@@ -1753,10 +1753,6 @@ function App() {
       id: 80,
       question: "Who wrote the novel 'Ulysses'?",
       answers: [
-        {
-          text: "James Joyce",
-          correct: true,
-        },
         {
           text: "Virginia Woolf",
           correct: false,
@@ -1768,6 +1764,10 @@ function App() {
         {
           text: "F. Scott Fitzgerald",
           correct: false,
+        },
+        {
+          text: "James Joyce",
+          correct: true,
         },
       ],
     },
@@ -1886,7 +1886,7 @@ function App() {
       question: "In which year did the Spanish Civil War end?",
       answers: [
         {
-          text: "1936",
+          text: "1933",
           correct: false,
         },
         {
@@ -1930,16 +1930,16 @@ function App() {
       question: "Which US state is the smallest by land area?",
       answers: [
         {
-          text: "Rhode Island",
-          correct: true,
-        },
-        {
           text: "Connecticut",
           correct: false,
         },
         {
           text: "Delaware",
           correct: false,
+        },
+        {
+          text: "Rhode Island",
+          correct: true,
         },
         {
           text: "Hawaii",
@@ -3095,32 +3095,77 @@ function App() {
         },
       ],
     },
+    {
+      id: 150,
+      question: "What is the name of the largest glacier outside of the polar regions?",
+      answers: [
+        {
+          text: "Vatnajökull",
+          correct: false,
+        },
+        {
+          text: "Himalayan Glacier",
+          correct: false,
+        },
+        {
+          text: "Fedchenko Glacier",
+          correct: false,
+        },
+        {
+          text: "Siachen Glacier",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 151,
+      question: "Which book holds the world record for being the most stolen from public libraries?",
+      answers: [
+        {
+          text: "The Bible",
+          correct: false,
+        },
+        {
+          text: "The Catcher in the Rye",
+          correct: false,
+        },
+        {
+          text: "To Kill a Mockingbird",
+          correct: false,
+        },
+        {
+          text: "Guinness World Records",
+          correct: true,
+        },
+      ],
+    }
   ], []);
 
   useEffect(() => {
-    function generateRandomNumbers(min1, min2, min3, max1, max2, max3, count) {
-      let numbers = [];
-      while (numbers.length < 5) {
-        let random = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
-        if (!numbers.includes(random)) {
-          numbers.push(random);
-        }
+
+    function generateUniqueRandomNumbers() {
+      const result = new Set();
+      
+      // generate first 5 unique numbers from 1-50
+      while (result.size < 5) {
+        result.add(Math.floor(Math.random() * 50) + 1);
       }
-      while (numbers.length < 10) {
-        let random = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
-        if (!numbers.includes(random)) {
-          numbers.push(random);
-        }
+      
+      // generate next 5 unique numbers from 51-100
+      while (result.size < 10) {
+        result.add(Math.floor(Math.random() * 50) + 51);
       }
-      while (numbers.length < 15) {
-        let random = Math.floor(Math.random() * (max3 - min3 + 1)) + min3;
-        if (!numbers.includes(random)) {
-          numbers.push(random);
-        }
+      
+      // generate last 5 unique numbers from 101-150
+      while (result.size < 15) {
+        result.add(Math.floor(Math.random() * 50) + 101);
       }
-      return numbers;
+      
+      return Array.from(result); // creates array from set
     }
-    setQuestionNumber(generateRandomNumbers(1, 51, 101, 50, 100, 149, 15));
+
+    setQuestionNumber(generateUniqueRandomNumbers()); 
+
   }, [])
 
   const [questionNumber, setQuestionNumber] = useState([]);
@@ -3150,38 +3195,37 @@ function App() {
     ], []);
   
   useEffect(() => {
-    questionID > 1 && setEarned(moneyValues.find(each => each.id === questionID - 1).amount)
+    questionID > 1 && setEarned(moneyValues.find(each => each.id === questionID - 1).amount);
   }, [questionID]);
   
   return (
     <>
-    {data.map(question => console.log(question.answers))}
     <div className='app'>
       <div className='flex min-h-screen bg-darkblue text-white'>
         {/* Left Container */}
         <div className='main w-3/4 bg-[url("../set.jpg")] bg-cover flex flex-col'>
-          {lost ?
+          {lost ? //check defeat condition
             <div className='h-72 m-auto mb-24 w-full bg-darkblue border-6 text-center text-4xl'>
               You earned {earned}!
               <br />
               <button className='rounded-full border-8 border-white p-4 hover:bg-green-500 mt-12'
               onClick={() => window.location.reload()}>
-              Try again?
+                Try again?
               </button>
               <br />
             </div>
           :
-          won ? 
+          won ?  // check victory condition
             <div className='h-72 m-auto mb-24 w-full bg-darkblue border-6 text-center text-4xl'>
-            Congratulations! You Win $1000000!
+              Congratulations! You Win $1000000!
             <br/>
             <button className='rounded-full border-8 border-white p-4 hover:bg-green-500 mt-12'
-              onClick={() => window.location.reload()}>
+            onClick={() => window.location.reload()}>
               Try again?
             </button>
           </div>
           :
-          start ? 
+          start ? //check start
           <Start setStart={setStart} />
           :
             (
@@ -3204,7 +3248,7 @@ function App() {
         </div>
 
         {/* Right Container */}
-        <div className='right w-1/4'>
+        <div className='w-1/4'>
           <ul className='p-5 mt-24'>
 
             {moneyValues.map((each) =>
