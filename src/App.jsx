@@ -1662,7 +1662,7 @@ function App() {
 
     {
       id: 76,
-      question: "Which famous actor played the character of Forrest Gump in the movie of the same name?",
+      question: "Which famous actor played the character of Forrest Gump?",
       answers: [
         {
           text: "Tom Hanks",
@@ -3075,15 +3075,15 @@ function App() {
     },
     {
       id: 150,
-      question: "What is the name of the mountain range that runs through the western United States?",
+      question: "What is the name of the mountain range that runs through the eastern United States?",
       answers: [
         {
           text: "Rocky Mountains",
-          correct: true,
+          correct: false,
         },
         {
           text: "Appalachian Mountains",
-          correct: false,
+          correct: true,
         },
         {
           text: "Sierra Nevada Mountains",
